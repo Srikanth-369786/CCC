@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC2 CC Practice Test | Free Cybersecurity Certification Quiz</title>
+    <meta name="description" content="Pass the ISC2 Certified in Cybersecurity (CC) exam with this free practice test. 164+ questions for beginners & professionals. Instant feedback & exam prep tips.">   
+    <meta name="keywords" content="ISC2 CC practice test, free cybersecurity certification quiz, ISC2 exam prep, entry-level cybersecurity quiz, CC certification practice, cybersecurity fundamentals test">       <meta name="author" content="Krishna Dwivedi">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="ISC2 Certified in Cybersecurity (CC) Practice Quiz">
+    <meta property="og:description" content="Boost your exam prep with this free ISC2 CC practice quiz. 164+ interactive questions covering cybersecurity fundamentals.">
+    <meta property="og:image" content="/favicon/quiz.png">
+    <meta property="og:url" content="https://hope.is-a.dev/cc-practice-quiz/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ISC2 Certified in Cybersecurity (CC) Practice Quiz">
+    <meta name="twitter:description" content="Free ISC2 CC practice quiz with 164+ interactive questions. Perfect for beginners & cybersecurity enthusiasts.">
+    <meta name="twitter:image" content="https://yourwebsite.com/favicon/quiz.png">
+    <meta name="twitter:site" content="@hopex">
+    <meta name="twitter:creator" content="@sudohopex">   
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hope.is-a.dev/cc-practice-quiz/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/quiz.png">
+
+    <!-- Schema Markup -->
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "ISC2 Certified in Cybersecurity (CC) Practice Quiz",
+      "description": "Free practice quiz for ISC2 Certified in Cybersecurity exam with 164+ questions.",
+      "hasPart": {
+        "@type": "Question",
+        "category": "Cybersecurity",
+        "typicalAgeRange": "16-65",
+        "learningResourceType": "Practice test"
+      }
+    }
+    </script>  
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="app">
+        <a href="feedback.html" class="feedback-btn" style="position: relative; top: -10px; left: -20px; padding: 8px 15px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 5px; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); opacity: 0.5; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'" onclick="this.style.opacity='1'">User's Feedbacks</a>
+
+        <div id="welcome-header">
+            <h1 style="color:#0828b8;">Welcome🙏 to the ISC2 CC Quiz🤔</h1>
+            <h2 style="text-align: center;">By <a href="https://sudohopex.github.io/Link-tree/" target="_blank" style="text-decoration: none;">SudoHopeX</a></h2>
+   <div id="visit-count" style="text-align:right; margin-top:10px;">
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=sudohopex.cc-practice-quiz&left_text=Tests%20Taken" alt="Test Attempts"/>
+        </div>
+        </div>  
+        <div id="user-input" class="form-section">
+            <h2 style="text-align: center; color:rgb(21, 34, 213);">Kindly Enter Your Details✍️</h2>
+            <input type="text" id="username" autocomplete="name" placeholder="Enter your name e.g. Krishna" required>
+            <input type="number" id="num-questions" min="1" max="164" placeholder="No. of questions to attempt e.g. 11, Max=164" required>
+            <br>
+            <button id="start-btn" class="start-quiz-btn">Start Quiz⚔️</button>
+        </div>
+
+        <div id="quiz-container" class="form-section" style="display: none; margin-top: 21px;">
+            <h2 style="text-align: center; color: #0828b8;">Quiz Questions</h2>
+            <div id="user-info">
+                <span id="display-username"></span>
+                <span id="total-questions"></span>
+            </div>
+            <div id="question-container">
+                <div id="question"></div>
+                <div id="options-container">
+                    <form id="options-form">
+                        <!-- Options will be dynamically inserted here -->
+                    </form>
+                </div>
+                <div id="answer-feedback" style="display: none;">
+                    <p id="correct-answer"></p>
+                </div>
+                <button id="submit-answer" style="display: none;">Submit Answer</button>
+            </div>
+        </div>
+
+        <div id="results-section" class="form-section" style="display: none;">
+            <h2>Quiz Results</h2>
+            <div id="score-summary">
+                <p id="total-score"></p>
+                <p id="correct-answers"></p>
+                <p id="wrong-answers"></p>
+            </div>
+        </div>
+
+        <button id="show-data-info" style="position: relative; left: -75px; right: 20px; top: 40px; font-size: 12px; max-width: 280px; padding: 8px 12px; background-color: #f8f9fa; color: #666; border: 1px solid #dce4ec; border-radius: 4px; cursor: pointer;">Know🧐 what we do with your info 🤔</button>
+        <div id="data-info" style="display: none; position: fixed; bottom: 60px; right: 20px; width: 300px; padding: 15px; background-color: white; border: 1px solid #dce4ec; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <h3>We do nothing🚫 with your info as it is neither stored📝 nor forwarded📩 anywhere</h3>
+            <p> You info is only used to add better user experience💕 to you😊 while giving this quiz ⚔️</p>
+            <p style="margin-bottom: 0px;"> <b>Regards🙏</b></p>
+            <a href="https://linkedin.com/in/dkrishna0124" target="_blank" style="text-decoration: none;"><b>Krishna Dwivedi</b></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+            particlesJS('particles-js',
+            {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": ["#8A2BE2", "#9370DB", "#BA55D3", "#9400D3"]
+                    },
+                    "shape": {
+                        "type": ["circle", "triangle", "star", "polygon"],
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 6
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.2,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 4,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.5,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#9370DB",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "bounce",
+                        "bounce": true,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 0.6
+                            }
+                        },
+                        "bubble": {
+                            "distance": 200,
+                            "size": 6,
+                            "duration": 0.3,
+                            "opacity": 1,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
+</body>
+<footer style="text-align: Center; margin-top: 16px;">Designed & Owned By SudoHopeX [Krishna Dwivedi]</footer>
+</html>
+
